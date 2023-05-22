@@ -1,0 +1,1419 @@
+openapi: 3.0.3
+info:
+  title: 'Code Challenge For Yoma'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: ''
+paths:
+  /api/authenticate:
+    post:
+      summary: ''
+      operationId: postApiAuthenticate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: non
+                password:
+                  type: string
+                  description: ''
+                  example: eos
+              required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: eligendi
+                password:
+                  type: string
+                  description: ''
+                  example: sequi
+                name:
+                  type: string
+                  description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+                  example: txiedliuib
+              required:
+                - email
+                - password
+                - name
+      security: []
+  /api/movie-lists:
+    get:
+      summary: ''
+      operationId: getApiMovieLists
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: Success
+                  data:
+                    -
+                      id: 1
+                      title: 'Amet perspiciatis ipsa voluptatibus.'
+                      summary: 'Mollitia velit voluptatem fuga delectus voluptatem quisquam. Accusantium nemo ut maiores dignissimos. Sed quidem voluptatem ullam aut provident similique et.'
+                      author: 'Cedrick Schmitt'
+                      imdb_rating: '4.7'
+                      pdf_link: 'http://wolf.info/'
+                      generes:
+                        -
+                          id: 1
+                          name: adipisci
+                        -
+                          id: 2
+                          name: consequatur
+                        -
+                          id: 3
+                          name: voluptates
+                      tags:
+                        -
+                          id: 1
+                          name: praesentium
+                        -
+                          id: 2
+                          name: quasi
+                        -
+                          id: 3
+                          name: quis
+                      comments:
+                        -
+                          id: 1
+                          comment: 'Good Movie'
+                          commenter: test@test.com
+                        -
+                          id: 2
+                          comment: 'Good Movie'
+                          commenter: test@sss.com
+                    -
+                      id: 3
+                      title: 'Maiores tenetur dolorem ullam iusto.'
+                      summary: 'Voluptatem voluptatibus quia qui explicabo fuga possimus. Aspernatur unde enim qui adipisci. Perspiciatis non tempore voluptatem. Illum nisi ab delectus modi et rerum.'
+                      author: 'Miss Claudine Dietrich'
+                      imdb_rating: '7.7'
+                      pdf_link: 'https://www.muller.biz/aut-veritatis-nulla-voluptas-accusamus'
+                      generes:
+                        -
+                          id: 7
+                          name: porro
+                        -
+                          id: 8
+                          name: at
+                        -
+                          id: 9
+                          name: quia
+                      tags:
+                        -
+                          id: 7
+                          name: cupiditate
+                        -
+                          id: 8
+                          name: architecto
+                        -
+                          id: 9
+                          name: totam
+                      comments: []
+                    -
+                      id: 4
+                      title: 'Et sequi mollitia maiores sit occaecati.'
+                      summary: 'Dolor voluptatem aperiam assumenda minus. Quia eum ut voluptatem distinctio at voluptatem voluptatem quia.'
+                      author: 'Shakira Roberts'
+                      imdb_rating: '5.3'
+                      pdf_link: 'https://murray.biz/illo-illo-sed-velit-voluptatem-deserunt-et-magnam-qui.html'
+                      generes:
+                        -
+                          id: 10
+                          name: dolore
+                        -
+                          id: 11
+                          name: consequuntur
+                        -
+                          id: 12
+                          name: optio
+                      tags:
+                        -
+                          id: 10
+                          name: doloremque
+                        -
+                          id: 11
+                          name: hic
+                        -
+                          id: 12
+                          name: porro
+                      comments: []
+                    -
+                      id: 5
+                      title: 'Non reprehenderit in iusto blanditiis et error.'
+                      summary: 'Ut vel dolore in omnis qui nobis sit. Alias impedit sit molestias quae. Rem aut in similique hic rem.'
+                      author: 'Rosemary Willms'
+                      imdb_rating: '6.2'
+                      pdf_link: 'http://kilback.com/'
+                      generes:
+                        -
+                          id: 13
+                          name: voluptatum
+                        -
+                          id: 14
+                          name: aperiam
+                        -
+                          id: 15
+                          name: saepe
+                      tags:
+                        -
+                          id: 13
+                          name: dolorum
+                        -
+                          id: 14
+                          name: rerum
+                        -
+                          id: 15
+                          name: eos
+                      comments: []
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Success
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Amet perspiciatis ipsa voluptatibus.'
+                        summary: 'Mollitia velit voluptatem fuga delectus voluptatem quisquam. Accusantium nemo ut maiores dignissimos. Sed quidem voluptatem ullam aut provident similique et.'
+                        author: 'Cedrick Schmitt'
+                        imdb_rating: '4.7'
+                        pdf_link: 'http://wolf.info/'
+                        generes:
+                          -
+                            id: 1
+                            name: adipisci
+                          -
+                            id: 2
+                            name: consequatur
+                          -
+                            id: 3
+                            name: voluptates
+                        tags:
+                          -
+                            id: 1
+                            name: praesentium
+                          -
+                            id: 2
+                            name: quasi
+                          -
+                            id: 3
+                            name: quis
+                        comments:
+                          -
+                            id: 1
+                            comment: 'Good Movie'
+                            commenter: test@test.com
+                          -
+                            id: 2
+                            comment: 'Good Movie'
+                            commenter: test@sss.com
+                      -
+                        id: 3
+                        title: 'Maiores tenetur dolorem ullam iusto.'
+                        summary: 'Voluptatem voluptatibus quia qui explicabo fuga possimus. Aspernatur unde enim qui adipisci. Perspiciatis non tempore voluptatem. Illum nisi ab delectus modi et rerum.'
+                        author: 'Miss Claudine Dietrich'
+                        imdb_rating: '7.7'
+                        pdf_link: 'https://www.muller.biz/aut-veritatis-nulla-voluptas-accusamus'
+                        generes:
+                          -
+                            id: 7
+                            name: porro
+                          -
+                            id: 8
+                            name: at
+                          -
+                            id: 9
+                            name: quia
+                        tags:
+                          -
+                            id: 7
+                            name: cupiditate
+                          -
+                            id: 8
+                            name: architecto
+                          -
+                            id: 9
+                            name: totam
+                        comments: []
+                      -
+                        id: 4
+                        title: 'Et sequi mollitia maiores sit occaecati.'
+                        summary: 'Dolor voluptatem aperiam assumenda minus. Quia eum ut voluptatem distinctio at voluptatem voluptatem quia.'
+                        author: 'Shakira Roberts'
+                        imdb_rating: '5.3'
+                        pdf_link: 'https://murray.biz/illo-illo-sed-velit-voluptatem-deserunt-et-magnam-qui.html'
+                        generes:
+                          -
+                            id: 10
+                            name: dolore
+                          -
+                            id: 11
+                            name: consequuntur
+                          -
+                            id: 12
+                            name: optio
+                        tags:
+                          -
+                            id: 10
+                            name: doloremque
+                          -
+                            id: 11
+                            name: hic
+                          -
+                            id: 12
+                            name: porro
+                        comments: []
+                      -
+                        id: 5
+                        title: 'Non reprehenderit in iusto blanditiis et error.'
+                        summary: 'Ut vel dolore in omnis qui nobis sit. Alias impedit sit molestias quae. Rem aut in similique hic rem.'
+                        author: 'Rosemary Willms'
+                        imdb_rating: '6.2'
+                        pdf_link: 'http://kilback.com/'
+                        generes:
+                          -
+                            id: 13
+                            name: voluptatum
+                          -
+                            id: 14
+                            name: aperiam
+                          -
+                            id: 15
+                            name: saepe
+                        tags:
+                          -
+                            id: 13
+                            name: dolorum
+                          -
+                            id: 14
+                            name: rerum
+                          -
+                            id: 15
+                            name: eos
+                        comments: []
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        title:
+                          type: string
+                          example: 'Amet perspiciatis ipsa voluptatibus.'
+                        summary:
+                          type: string
+                          example: 'Mollitia velit voluptatem fuga delectus voluptatem quisquam. Accusantium nemo ut maiores dignissimos. Sed quidem voluptatem ullam aut provident similique et.'
+                        author:
+                          type: string
+                          example: 'Cedrick Schmitt'
+                        imdb_rating:
+                          type: string
+                          example: '4.7'
+                        pdf_link:
+                          type: string
+                          example: 'http://wolf.info/'
+                        generes:
+                          type: array
+                          example:
+                            -
+                              id: 1
+                              name: adipisci
+                            -
+                              id: 2
+                              name: consequatur
+                            -
+                              id: 3
+                              name: voluptates
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 1
+                              name:
+                                type: string
+                                example: adipisci
+                        tags:
+                          type: array
+                          example:
+                            -
+                              id: 1
+                              name: praesentium
+                            -
+                              id: 2
+                              name: quasi
+                            -
+                              id: 3
+                              name: quis
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 1
+                              name:
+                                type: string
+                                example: praesentium
+                        comments:
+                          type: array
+                          example:
+                            -
+                              id: 1
+                              comment: 'Good Movie'
+                              commenter: test@test.com
+                            -
+                              id: 2
+                              comment: 'Good Movie'
+                              commenter: test@sss.com
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                example: 1
+                              comment:
+                                type: string
+                                example: 'Good Movie'
+                              commenter:
+                                type: string
+                                example: test@test.com
+      tags:
+        - Endpoints
+      security: []
+  '/api/movie-details/{id}':
+    get:
+      summary: ''
+      operationId: getApiMovieDetailsId
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Movie] dolorem'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 408
+                  trace:
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 384
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 143
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 152
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 128
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 80
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 799
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 776
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 740
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 729
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 92
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 209
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 166
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 124
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 71
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 49
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 51
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 208
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/symfony/console/Command/Command.php
+                      line: 312
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 178
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/symfony/console/Application.php
+                      line: 1040
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/symfony/console/Application.php
+                      line: 314
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/symfony/console/Application.php
+                      line: 168
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 200
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/yoma/artisan
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Movie] dolorem'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line:
+                    type: integer
+                    example: 408
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 384
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 143
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 152
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 128
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 80
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 799
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 776
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 740
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 729
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 92
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 209
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 166
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 124
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 71
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 49
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 51
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 208
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/symfony/console/Command/Command.php
+                        line: 312
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 178
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/symfony/console/Application.php
+                        line: 1040
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/symfony/console/Application.php
+                        line: 314
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/symfony/console/Application.php
+                        line: 168
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 200
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/yoma/artisan
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line:
+                          type: integer
+                          example: 384
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the movie detail.'
+        example: dolorem
+        required: true
+        schema:
+          type: string
+  /api/movie-create:
+    get:
+      summary: ''
+      operationId: getApiMovieCreate
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/movie-store:
+    post:
+      summary: ''
+      operationId: postApiMovieStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+                  example: wmflzjjwlwsya
+                summary:
+                  type: string
+                  description: 'Must be at least 10 characters.'
+                  example: swxwaukyqfsxntwgwuieammknxnsybhiudtrisarskztzriiceqvipcdigsmmzaqyiudeltewzqvlwutfykadfx
+                coverImage:
+                  type: string
+                  description: ''
+                  example: ab
+                imdbRating:
+                  type: number
+                  description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+                  example: '098944'
+                pdfLink:
+                  type: string
+                  description: ''
+                  example: officia
+                authorId:
+                  type: integer
+                  description: ''
+                  example: 3
+                tags:
+                  type: array
+                  description: ''
+                  example:
+                    - eius
+                  items:
+                    type: string
+                genres:
+                  type: array
+                  description: ''
+                  example:
+                    - culpa
+                  items:
+                    type: string
+              required:
+                - title
+                - summary
+                - coverImage
+                - imdbRating
+                - pdfLink
+                - authorId
+                - tags
+                - genres
+      security: []
+  '/api/movie-update/{id}':
+    put:
+      summary: ''
+      operationId: putApiMovieUpdateId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+                  example: zgjofzhcfu
+                summary:
+                  type: string
+                  description: 'Must be at least 10 characters.'
+                  example: ayvuptcmjqjfdvmnoipwwgzeuhtpmahijojtl
+                imdbRating:
+                  type: number
+                  description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+                  example: '6'
+                pdfLink:
+                  type: string
+                  description: ''
+                  example: laudantium
+                authorId:
+                  type: integer
+                  description: ''
+                  example: 15
+                tags:
+                  type: array
+                  description: ''
+                  example:
+                    - quia
+                  items:
+                    type: string
+                genres:
+                  type: array
+                  description: ''
+                  example:
+                    - doloribus
+                  items:
+                    type: string
+              required:
+                - title
+                - summary
+                - imdbRating
+                - pdfLink
+                - authorId
+                - tags
+                - genres
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the movie update.'
+        example: velit
+        required: true
+        schema:
+          type: string
+  '/api/movie-delete/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiMovieDeleteId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the movie delete.'
+        example: hic
+        required: true
+        schema:
+          type: string
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/comment-store:
+    post:
+      summary: ''
+      operationId: postApiCommentStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                comment:
+                  type: string
+                  description: 'Must be at least 3 characters.'
+                  example: ruzgfifroocfypmmzxqganeheoihvgxbdkmjszeuajgqptavgkegbibttgrgdutqpkapbhnw
+                commenter:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: lebert@example.net
+                movie_id:
+                  type: integer
+                  description: ''
+                  example: 13
+              required:
+                - comment
+                - commenter
+                - movie_id
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

@@ -1,0 +1,971 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/authenticate
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: non
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: eos
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: non
+      password: eos
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: eligendi
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: sequi
+        type: string
+        custom: []
+      name:
+        name: name
+        description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+        required: true
+        example: txiedliuib
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: eligendi
+      password: sequi
+      name: txiedliuib
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/movie-lists
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":"Success","data":[{"id":1,"title":"Amet perspiciatis ipsa voluptatibus.","summary":"Mollitia velit voluptatem fuga delectus voluptatem quisquam. Accusantium nemo ut maiores dignissimos. Sed quidem voluptatem ullam aut provident similique et.","author":"Cedrick Schmitt","imdb_rating":"4.7","pdf_link":"http:\/\/wolf.info\/","generes":[{"id":1,"name":"adipisci"},{"id":2,"name":"consequatur"},{"id":3,"name":"voluptates"}],"tags":[{"id":1,"name":"praesentium"},{"id":2,"name":"quasi"},{"id":3,"name":"quis"}],"comments":[{"id":1,"comment":"Good Movie","commenter":"test@test.com"},{"id":2,"comment":"Good Movie","commenter":"test@sss.com"}]},{"id":3,"title":"Maiores tenetur dolorem ullam iusto.","summary":"Voluptatem voluptatibus quia qui explicabo fuga possimus. Aspernatur unde enim qui adipisci. Perspiciatis non tempore voluptatem. Illum nisi ab delectus modi et rerum.","author":"Miss Claudine Dietrich","imdb_rating":"7.7","pdf_link":"https:\/\/www.muller.biz\/aut-veritatis-nulla-voluptas-accusamus","generes":[{"id":7,"name":"porro"},{"id":8,"name":"at"},{"id":9,"name":"quia"}],"tags":[{"id":7,"name":"cupiditate"},{"id":8,"name":"architecto"},{"id":9,"name":"totam"}],"comments":[]},{"id":4,"title":"Et sequi mollitia maiores sit occaecati.","summary":"Dolor voluptatem aperiam assumenda minus. Quia eum ut voluptatem distinctio at voluptatem voluptatem quia.","author":"Shakira Roberts","imdb_rating":"5.3","pdf_link":"https:\/\/murray.biz\/illo-illo-sed-velit-voluptatem-deserunt-et-magnam-qui.html","generes":[{"id":10,"name":"dolore"},{"id":11,"name":"consequuntur"},{"id":12,"name":"optio"}],"tags":[{"id":10,"name":"doloremque"},{"id":11,"name":"hic"},{"id":12,"name":"porro"}],"comments":[]},{"id":5,"title":"Non reprehenderit in iusto blanditiis et error.","summary":"Ut vel dolore in omnis qui nobis sit. Alias impedit sit molestias quae. Rem aut in similique hic rem.","author":"Rosemary Willms","imdb_rating":"6.2","pdf_link":"http:\/\/kilback.com\/","generes":[{"id":13,"name":"voluptatum"},{"id":14,"name":"aperiam"},{"id":15,"name":"saepe"}],"tags":[{"id":13,"name":"dolorum"},{"id":14,"name":"rerum"},{"id":15,"name":"eos"}],"comments":[]}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/movie-details/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie detail.'
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: dolorem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Movie] dolorem",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+              "line": 408,
+              "trace": [
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+                      "line": 384,
+                      "function": "prepareException",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
+                      "line": 54,
+                      "function": "render",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
+                      "line": 51,
+                      "function": "render",
+                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 143,
+                      "function": "handleException",
+                      "class": "Illuminate\\Routing\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 152,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 128,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 80,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 799,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 776,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 740,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 729,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 92,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 209,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 166,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 124,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 71,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 49,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 51,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 208,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/symfony/console/Command/Command.php",
+                      "line": 312,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 178,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/symfony/console/Application.php",
+                      "line": 1040,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/symfony/console/Application.php",
+                      "line": 314,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/symfony/console/Application.php",
+                      "line": 168,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 200,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/yoma/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/movie-create
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/movie-store
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+        required: true
+        example: wmflzjjwlwsya
+        type: string
+        custom: []
+      summary:
+        name: summary
+        description: 'Must be at least 10 characters.'
+        required: true
+        example: swxwaukyqfsxntwgwuieammknxnsybhiudtrisarskztzriiceqvipcdigsmmzaqyiudeltewzqvlwutfykadfx
+        type: string
+        custom: []
+      coverImage:
+        name: coverImage
+        description: ''
+        required: true
+        example: ab
+        type: string
+        custom: []
+      imdbRating:
+        name: imdbRating
+        description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+        required: true
+        example: '098944'
+        type: number
+        custom: []
+      pdfLink:
+        name: pdfLink
+        description: ''
+        required: true
+        example: officia
+        type: string
+        custom: []
+      authorId:
+        name: authorId
+        description: ''
+        required: true
+        example: 3
+        type: integer
+        custom: []
+      tags:
+        name: tags
+        description: ''
+        required: true
+        example:
+          - eius
+        type: 'string[]'
+        custom: []
+      genres:
+        name: genres
+        description: ''
+        required: true
+        example:
+          - culpa
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      title: wmflzjjwlwsya
+      summary: swxwaukyqfsxntwgwuieammknxnsybhiudtrisarskztzriiceqvipcdigsmmzaqyiudeltewzqvlwutfykadfx
+      coverImage: ab
+      imdbRating: '098944'
+      pdfLink: officia
+      authorId: 3
+      tags:
+        - eius
+      genres:
+        - culpa
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/movie-update/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie update.'
+        required: true
+        example: velit
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: velit
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 5 characters. Must not be greater than 30 characters.'
+        required: true
+        example: zgjofzhcfu
+        type: string
+        custom: []
+      summary:
+        name: summary
+        description: 'Must be at least 10 characters.'
+        required: true
+        example: ayvuptcmjqjfdvmnoipwwgzeuhtpmahijojtl
+        type: string
+        custom: []
+      imdbRating:
+        name: imdbRating
+        description: 'Must match the regex /^\d+(\.\d{1,2})?$/.'
+        required: true
+        example: '6'
+        type: number
+        custom: []
+      pdfLink:
+        name: pdfLink
+        description: ''
+        required: true
+        example: laudantium
+        type: string
+        custom: []
+      authorId:
+        name: authorId
+        description: ''
+        required: true
+        example: 15
+        type: integer
+        custom: []
+      tags:
+        name: tags
+        description: ''
+        required: true
+        example:
+          - quia
+        type: 'string[]'
+        custom: []
+      genres:
+        name: genres
+        description: ''
+        required: true
+        example:
+          - doloribus
+        type: 'string[]'
+        custom: []
+    cleanBodyParameters:
+      title: zgjofzhcfu
+      summary: ayvuptcmjqjfdvmnoipwwgzeuhtpmahijojtl
+      imdbRating: '6'
+      pdfLink: laudantium
+      authorId: 15
+      tags:
+        - quia
+      genres:
+        - doloribus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/movie-delete/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the movie delete.'
+        required: true
+        example: hic
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: hic
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/comment-store
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      comment:
+        name: comment
+        description: 'Must be at least 3 characters.'
+        required: true
+        example: ruzgfifroocfypmmzxqganeheoihvgxbdkmjszeuajgqptavgkegbibttgrgdutqpkapbhnw
+        type: string
+        custom: []
+      commenter:
+        name: commenter
+        description: 'Must be a valid email address.'
+        required: true
+        example: lebert@example.net
+        type: string
+        custom: []
+      movie_id:
+        name: movie_id
+        description: ''
+        required: true
+        example: 13
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      comment: ruzgfifroocfypmmzxqganeheoihvgxbdkmjszeuajgqptavgkegbibttgrgdutqpkapbhnw
+      commenter: lebert@example.net
+      movie_id: 13
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
